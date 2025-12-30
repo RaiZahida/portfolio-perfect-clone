@@ -14,7 +14,9 @@ import {
   Github,
   Database,
   Terminal,
-  GitBranch
+  GitBranch,
+  FileCode,
+  Layers
 } from "lucide-react";
 
 const skills = [
@@ -28,6 +30,8 @@ const skills = [
   { name: "MongoDB", icon: Leaf, color: "#47A248" },
   { name: "MySQL", icon: Database, color: "#4479A1" },
   { name: "Firebase", icon: Flame, color: "#FFCA28" },
+  { name: "Supabase", icon: Layers, color: "#3ECF8E" },
+  { name: "Appwrite", icon: FileCode, color: "#FD366E" },
   { name: "Docker", icon: Container, color: "#2496ED" },
   { name: "AWS", icon: Cloud, color: "#FF9900" },
   { name: "GitHub", icon: Github, color: "#ffffff" },
@@ -71,16 +75,16 @@ const SkillCard = ({ name, Icon, color }: { name: string; Icon: React.ElementTyp
       className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"
       style={{ backgroundColor: color }}
     />
-    <div className="relative bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl p-4 md:p-6 flex flex-col items-center justify-center gap-3 hover:border-primary/50 transition-all duration-300 min-h-[100px] md:min-h-[120px]">
+    <div className="relative bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl p-4 md:p-5 flex flex-col items-center justify-center gap-2 hover:border-primary/50 transition-all duration-300 h-[100px] md:h-[110px]">
       <div 
-        className="w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+        className="w-10 h-10 rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
         style={{ 
           backgroundColor: `${color}20`,
         }}
       >
-        <Icon size={24} style={{ color }} className="md:w-7 md:h-7" />
+        <Icon size={22} style={{ color }} />
       </div>
-      <span className="text-xs md:text-sm font-medium text-foreground text-center leading-tight">{name}</span>
+      <span className="text-xs font-medium text-foreground text-center leading-tight line-clamp-2">{name}</span>
     </div>
   </motion.div>
 );
@@ -108,19 +112,39 @@ const SkillsSection = () => {
         </motion.div>
 
         <motion.div 
-          className="max-w-5xl mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 md:gap-4"
+          className="max-w-4xl mx-auto flex flex-wrap justify-center gap-3 md:gap-4"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
         >
           {skills.map((skill) => (
-            <SkillCard 
-              key={skill.name} 
-              name={skill.name} 
-              Icon={skill.icon}
-              color={skill.color}
-            />
+            <motion.div
+              key={skill.name}
+              variants={itemVariants}
+              whileHover={{ 
+                y: -8, 
+                scale: 1.05,
+                transition: { duration: 0.2 }
+              }}
+              className="group relative w-[calc(33.333%-8px)] sm:w-[calc(25%-12px)] md:w-[calc(20%-13px)]"
+            >
+              <div 
+                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"
+                style={{ backgroundColor: skill.color }}
+              />
+              <div className="relative bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl p-4 flex flex-col items-center justify-center gap-2 hover:border-primary/50 transition-all duration-300 h-[100px]">
+                <div 
+                  className="w-10 h-10 rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+                  style={{ 
+                    backgroundColor: `${skill.color}20`,
+                  }}
+                >
+                  <skill.icon size={22} style={{ color: skill.color }} />
+                </div>
+                <span className="text-xs font-medium text-foreground text-center leading-tight line-clamp-2">{skill.name}</span>
+              </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>
