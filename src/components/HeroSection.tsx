@@ -1,38 +1,38 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail } from "lucide-react";
-import profileImage from "@/assets/zahida-profile.jpg";
+import profileImage from "@/assets/zahida-profile.png";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center grid-pattern pt-20">
+    <section className="min-h-screen flex items-center justify-center grid-pattern pt-20 overflow-hidden">
       <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="order-2 lg:order-1 animate-slide-up">
-            <div className="inline-block px-4 py-2 rounded-full border border-primary/50 bg-primary/10 mb-6">
+          <div className="order-2 lg:order-1 text-center lg:text-left">
+            <div className="inline-block px-4 py-2 rounded-full border border-primary/50 bg-primary/10 mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <span className="text-primary text-sm font-medium">
                 Full-Stack Developer & DevOps Enthusiast
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6 leading-tight animate-slide-up" style={{ animationDelay: '0.3s' }}>
               Zahida Parveen
             </h1>
             
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 animate-slide-up" style={{ animationDelay: '0.4s' }}>
               I am a Software Engineering student with hands-on experience in MERN stack development, 
               cloud computing with AWS, and DevOps practices. Passionate about building scalable 
               web applications and continuous learning.
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg">
-                <Download size={20} />
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: '0.5s' }}>
+              <Button variant="hero" size="lg" className="group">
+                <Download size={20} className="group-hover:animate-bounce" />
                 Download CV
               </Button>
-              <Button variant="heroOutline" size="lg" asChild>
+              <Button variant="heroOutline" size="lg" asChild className="group">
                 <a href="#contact">
-                  <Mail size={20} />
+                  <Mail size={20} className="group-hover:scale-110 transition-transform" />
                   Contact Now
                 </a>
               </Button>
@@ -40,13 +40,14 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Profile Image */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fade-in">
-            <div className="relative">
-              <div className="frame-accent">
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="relative group">
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-emerald-500/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="frame-accent animate-float">
                 <img
                   src={profileImage}
                   alt="Zahida Parveen"
-                  className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-lg"
+                  className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover object-top rounded-lg relative z-10 transition-transform duration-500 group-hover:scale-[1.02]"
                 />
               </div>
             </div>
