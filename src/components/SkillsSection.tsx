@@ -1,106 +1,68 @@
 import { motion } from "framer-motion";
-import { Code, Smartphone, Cloud, Wrench } from "lucide-react";
 
-const skills = {
-  webDev: [
-    { name: "HTML", icon: "🌐" },
-    { name: "CSS", icon: "🎨" },
-    { name: "JavaScript", icon: "⚡" },
-    { name: "React", icon: "⚛️" },
-    { name: "Node.js", icon: "🟢" },
-    { name: "Express", icon: "🚂" },
-    { name: "MongoDB", icon: "🍃" },
-    { name: "Firebase", icon: "🔥" },
-    { name: "Responsive UI", icon: "💻" },
-  ],
-  appDev: [
-    { name: "React Native", icon: "📱" },
-    { name: "Expo", icon: "📲" },
-    { name: "Appwrite", icon: "📝" },
-    { name: "Cross-Platform", icon: "🔄" },
-  ],
-  devops: [
-    { name: "Docker", icon: "🐳" },
-    { name: "GitHub Actions", icon: "⚙️" },
-    { name: "AWS EC2", icon: "☁️" },
-    { name: "AWS Lambda", icon: "λ" },
-    { name: "AWS S3", icon: "🗄️" },
-    { name: "VPC", icon: "🔒" },
-    { name: "IAM", icon: "🔑" },
-    { name: "CI/CD", icon: "🔄" },
-  ],
-  tools: [
-    { name: "Git", icon: "📚" },
-    { name: "GitHub", icon: "🐙" },
-    { name: "VS Code", icon: "💻" },
-  ],
-};
+const skills = [
+  { name: "HTML", icon: "/icons/html.svg", color: "#E34F26" },
+  { name: "CSS", icon: "/icons/css.svg", color: "#1572B6" },
+  { name: "JavaScript", icon: "/icons/javascript.svg", color: "#F7DF1E" },
+  { name: "React", icon: "/icons/react.svg", color: "#61DAFB" },
+  { name: "React Native", icon: "/icons/react.svg", color: "#61DAFB" },
+  { name: "Node.js", icon: "/icons/nodejs.svg", color: "#339933" },
+  { name: "Express", icon: "/icons/express.svg", color: "#ffffff" },
+  { name: "MongoDB", icon: "/icons/mongodb.svg", color: "#47A248" },
+  { name: "Firebase", icon: "/icons/firebase.svg", color: "#FFCA28" },
+  { name: "Docker", icon: "/icons/docker.svg", color: "#2496ED" },
+  { name: "AWS", icon: "/icons/aws.svg", color: "#FF9900" },
+  { name: "GitHub", icon: "/icons/github.svg", color: "#ffffff" },
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.08,
     },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20, scale: 0.9 },
+  hidden: { opacity: 0, y: 30, scale: 0.8 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.4 },
+    transition: { 
+      duration: 0.5,
+    },
   },
 };
 
-const SkillCategory = ({ 
-  title, 
-  icon: Icon, 
-  skills, 
-  color,
-  delay = 0 
-}: { 
-  title: string; 
-  icon: React.ElementType; 
-  skills: { name: string; icon: string }[];
-  color: string;
-  delay?: number;
-}) => (
+const SkillCard = ({ name, color }: { name: string; color: string }) => (
   <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-50px" }}
-    transition={{ duration: 0.6, delay }}
-    className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:border-primary/30 transition-all duration-500"
+    variants={itemVariants}
+    whileHover={{ 
+      y: -8, 
+      scale: 1.05,
+      transition: { duration: 0.2 }
+    }}
+    className="group relative"
   >
-    <div className="flex items-center gap-3 mb-6">
-      <div className={`p-3 rounded-xl ${color}`}>
-        <Icon className="text-primary-foreground" size={24} />
+    <div 
+      className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"
+      style={{ backgroundColor: color }}
+    />
+    <div className="relative bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex flex-col items-center justify-center gap-3 hover:border-primary/50 transition-all duration-300 min-h-[120px]">
+      <div 
+        className="w-12 h-12 rounded-lg flex items-center justify-center text-2xl font-bold transition-transform duration-300 group-hover:scale-110"
+        style={{ 
+          backgroundColor: `${color}20`,
+          color: color 
+        }}
+      >
+        {name.charAt(0)}
       </div>
-      <h3 className="text-xl font-display font-semibold text-foreground">{title}</h3>
+      <span className="text-sm font-medium text-foreground text-center">{name}</span>
     </div>
-    <motion.div 
-      className="grid grid-cols-3 sm:grid-cols-3 gap-3"
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-    >
-      {skills.map((skill) => (
-        <motion.div 
-          key={skill.name} 
-          variants={itemVariants}
-          whileHover={{ scale: 1.05, y: -3 }}
-          className="skill-card text-center group cursor-pointer"
-        >
-          <span className="text-2xl mb-2 block group-hover:scale-110 transition-transform duration-300">{skill.icon}</span>
-          <span className="text-xs text-foreground font-medium">{skill.name}</span>
-        </motion.div>
-      ))}
-    </motion.div>
   </motion.div>
 );
 
@@ -126,39 +88,21 @@ const SkillsSection = () => {
           </p>
         </motion.div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-          <SkillCategory 
-            title="Web Development" 
-            icon={Code} 
-            skills={skills.webDev}
-            color="bg-gradient-to-br from-primary to-emerald-600"
-            delay={0}
-          />
-          
-          <SkillCategory 
-            title="App Development" 
-            icon={Smartphone} 
-            skills={skills.appDev}
-            color="bg-gradient-to-br from-blue-500 to-cyan-500"
-            delay={0.1}
-          />
-          
-          <SkillCategory 
-            title="DevOps & Cloud (AWS)" 
-            icon={Cloud} 
-            skills={skills.devops}
-            color="bg-gradient-to-br from-orange-500 to-amber-500"
-            delay={0.2}
-          />
-          
-          <SkillCategory 
-            title="Development Tools" 
-            icon={Wrench} 
-            skills={skills.tools}
-            color="bg-gradient-to-br from-purple-500 to-pink-500"
-            delay={0.3}
-          />
-        </div>
+        <motion.div 
+          className="max-w-5xl mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          {skills.map((skill) => (
+            <SkillCard 
+              key={skill.name} 
+              name={skill.name} 
+              color={skill.color}
+            />
+          ))}
+        </motion.div>
       </div>
     </section>
   );
