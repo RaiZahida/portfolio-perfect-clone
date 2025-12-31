@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const projects = [
   {
@@ -9,6 +11,7 @@ const projects = [
     tags: ["HTML", "CSS", "JavaScript", "API Integration"],
     highlight: "Built to master fundamentals with real-world functionality",
     icon: "🌐",
+    github: "https://github.com/zahidaparveen",
   },
   {
     title: "Event Management Platform",
@@ -18,6 +21,7 @@ const projects = [
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     highlight: "End-to-end solution handling complex database operations",
     icon: "📅",
+    github: "https://github.com/zahidaparveen",
   },
   {
     title: "University Info Desk",
@@ -27,6 +31,7 @@ const projects = [
     tags: ["React", "Supabase", "Hugging Face API", "RAG", "AI"],
     highlight: "Combines AI with modern web tech for smart assistance",
     icon: "🎓",
+    github: "https://github.com/zahidaparveen",
   },
   {
     title: "Live Chat Room",
@@ -36,6 +41,7 @@ const projects = [
     tags: ["Node.js", "Socket.io", "JavaScript", "Real-time"],
     highlight: "Mastered real-time communication and WebSocket protocols",
     icon: "💬",
+    github: "https://github.com/zahidaparveen",
   },
   {
     title: "Mobile Applications",
@@ -45,6 +51,7 @@ const projects = [
     tags: ["React Native", "Expo", "Appwrite", "Mobile"],
     highlight: "Expanding into mobile development with production-ready apps",
     icon: "📱",
+    github: "https://github.com/zahidaparveen",
   },
   {
     title: "Cloud & DevOps Projects",
@@ -54,6 +61,7 @@ const projects = [
     tags: ["AWS", "Docker", "CI/CD", "Firebase", "Lambda", "React"],
     highlight: "Full cloud infrastructure with automated deployments",
     icon: "☁️",
+    github: "https://github.com/zahidaparveen",
   },
 ];
 
@@ -129,20 +137,31 @@ const ProjectsSection = () => {
                 <p className="text-xs text-primary/80 italic mb-4 font-medium">
                   ✨ {project.highlight}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
                     <motion.span
                       key={tag}
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ delay: 0.1 * tagIndex }}
+                      transition={{ delay: 0.05 * tagIndex }}
                       className="px-2 py-1 text-xs bg-secondary text-secondary-foreground rounded hover:bg-primary/20 hover:text-primary transition-colors"
                     >
                       {tag}
                     </motion.span>
                   ))}
                 </div>
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="mt-auto"
+                >
+                  <Button variant="outline" size="sm" className="group/btn w-full">
+                    <Github size={16} className="group-hover/btn:scale-110 transition-transform" />
+                    View on GitHub
+                  </Button>
+                </a>
               </div>
             </motion.div>
           ))}
