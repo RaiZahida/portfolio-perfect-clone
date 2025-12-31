@@ -3,48 +3,54 @@ import { motion } from "framer-motion";
 const projects = [
   {
     title: "Mini Web Projects",
+    subtitle: "Weather App • Movie Search • Quiz Website",
     description:
-      "A collection of interactive web apps showcasing core frontend skills — from fetching live weather data to searching movies and testing knowledge with quizzes.",
+      "Interactive web apps showcasing core frontend skills — fetching live weather data, searching movies via API, and testing knowledge with quizzes.",
     tags: ["HTML", "CSS", "JavaScript", "API Integration"],
     highlight: "Built to master fundamentals with real-world functionality",
     icon: "🌐",
   },
   {
     title: "Event Management Platform",
+    subtitle: "Full-Stack Web Application",
     description:
-      "Full-stack event management system with user registration, event creation, and seamless booking — powered by a robust PHP & MySQL backend.",
+      "Complete event management system with user registration, event creation, and seamless booking — powered by a robust PHP & MySQL backend.",
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     highlight: "End-to-end solution handling complex database operations",
     icon: "📅",
   },
   {
     title: "University Info Desk",
+    subtitle: "AI-Powered Assistant",
     description:
-      "AI-powered information assistant that answers university-related queries using RAG architecture and Hugging Face models for intelligent responses.",
+      "Intelligent information assistant that answers university-related queries using RAG architecture and Hugging Face models for smart responses.",
     tags: ["React", "Supabase", "Hugging Face API", "RAG", "AI"],
     highlight: "Combines AI with modern web tech for smart assistance",
     icon: "🎓",
   },
   {
     title: "Live Chat Room",
+    subtitle: "Mini WhatsApp Clone",
     description:
-      "Real-time messaging app with emoji support, file sharing, and image uploads — a mini WhatsApp clone built with WebSocket technology.",
+      "Real-time messaging app with emoji support, file sharing, and image uploads — built with WebSocket technology for instant communication.",
     tags: ["Node.js", "Socket.io", "JavaScript", "Real-time"],
     highlight: "Mastered real-time communication and WebSocket protocols",
     icon: "💬",
   },
   {
     title: "Mobile Applications",
+    subtitle: "Doctor Appointment App • Ride Booking App",
     description:
-      "Cross-platform mobile apps for booking doctor appointments and rides — featuring authentication, real-time updates, and smooth UX.",
+      "Cross-platform mobile apps featuring authentication, real-time updates, booking systems, and smooth user experience.",
     tags: ["React Native", "Expo", "Appwrite", "Mobile"],
     highlight: "Expanding into mobile development with production-ready apps",
     icon: "📱",
   },
   {
     title: "Cloud & DevOps Projects",
+    subtitle: "AWS EC2 • Lambda • Firebase Apps",
     description:
-      "Enterprise-grade deployments with MERN on AWS EC2, CI/CD pipelines, Docker containers, Lambda functions, and Firebase-powered web apps.",
+      "Enterprise-grade deployments: MERN stack on AWS EC2 with CI/CD pipelines, Docker containers, Lambda image resizing, and Firebase-powered Event & News websites.",
     tags: ["AWS", "Docker", "CI/CD", "Firebase", "Lambda", "React"],
     highlight: "Full cloud infrastructure with automated deployments",
     icon: "☁️",
@@ -106,11 +112,16 @@ const ProjectsSection = () => {
               className="project-card group"
             >
               <div className="p-6 h-full flex flex-col">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">{project.icon}</span>
-                  <h3 className="text-xl font-display font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
+                <div className="mb-4">
+                  <div className="flex items-center gap-3 mb-1">
+                    <span className="text-3xl">{project.icon}</span>
+                    <h3 className="text-xl font-display font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-primary font-medium ml-12">
+                    {project.subtitle}
+                  </p>
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3 flex-1">
                   {project.description}
