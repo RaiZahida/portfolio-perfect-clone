@@ -11,6 +11,27 @@ const projects = [
     featured: true,
   },
   {
+    title: "University Info Desk",
+    description:
+      "AI-powered information desk using React frontend with Supabase as RAG backend and Hugging Face API for intelligent query responses.",
+    tags: ["React", "Supabase", "Hugging Face API", "RAG", "AI"],
+    featured: true,
+  },
+  {
+    title: "Ride Booking App",
+    description:
+      "Cross-platform mobile ride booking application built with Expo and Appwrite for real-time booking, authentication, and ride tracking.",
+    tags: ["React Native (Expo)", "Appwrite", "Mobile", "Real-time"],
+    featured: false,
+  },
+  {
+    title: "Event Management Website",
+    description:
+      "Full-stack event management platform with user registration, event creation, and booking system using PHP and MySQL backend.",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    featured: false,
+  },
+  {
     title: "Lambda Image Resizing Service",
     description:
       "AWS Lambda function integrated with S3 for automatic image resizing. Serverless architecture for scalable image processing.",
@@ -18,17 +39,17 @@ const projects = [
     featured: false,
   },
   {
+    title: "Doctor Appointment App",
+    description:
+      "Cross-platform mobile application built using Expo and Appwrite for booking doctor appointments with authentication and scheduling features.",
+    tags: ["React Native (Expo)", "Appwrite", "Mobile"],
+    featured: false,
+  },
+  {
     title: "Event & News Apps",
     description:
       "Built Event Registration and News Article websites using React & Firebase, with live hosting and real-time data updates.",
     tags: ["React", "Firebase", "Responsive UI"],
-    featured: false,
-  },
-  {
-    title: "Doctor Appointment App",
-    description:
-      "Cross-platform mobile application built using Expo and Appwrite for booking doctor appointments with authentication and scheduling features.",
-    tags: ["React Native", "Expo", "Appwrite", "Mobile"],
     featured: false,
   },
   {
