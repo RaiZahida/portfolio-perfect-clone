@@ -27,17 +27,26 @@ const AboutSection = () => {
         </motion.h2>
 
         <div className="max-w-4xl mx-auto">
-          <motion.p 
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-muted-foreground text-lg leading-relaxed mb-12 text-center"
+            className="text-muted-foreground text-lg leading-relaxed mb-12 space-y-4"
           >
-            I am currently pursuing my Bachelor of Science in Software Engineering at Government College 
-            University, Faisalabad with a CGPA of 3.86/4.00. My journey in technology has been fueled by 
-            curiosity and a desire to solve real-world problems through code.
-          </motion.p>
+            <p>
+              I began my academic journey as a medical student during my FSC, but I was always curious about how software is evolving and shaping the world. That curiosity slowly turned into direction, and fate led me to software engineering at GCUF.
+            </p>
+            <p>
+              I started with web development at Saylani, but I soon realized I wanted to explore paths that were less familiar. While many around me focused only on standard web projects, I chose to broaden my toolkit to stand out.
+            </p>
+            <p>
+              Along with building web applications, I added AWS, Docker, CI/CD, and Expo, diving into cloud, automation, and mobile app development. I enjoy exploring new ideas, learning by doing, and understanding systems beyond the surface.
+            </p>
+            <p className="text-primary font-medium">
+              I'm still learning — but I'm intentional about the direction I'm heading.
+            </p>
+          </motion.div>
 
           {/* Education & Certifications */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
