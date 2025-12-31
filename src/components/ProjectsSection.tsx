@@ -1,55 +1,53 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "MERN Stack Web App",
+    title: "Mini Web Projects",
     description:
-      "Full-stack application deployed on AWS EC2, containerized with Docker, with CI/CD pipeline using GitHub Actions for automated deployments.",
-    tags: ["React", "Node.js", "MongoDB", "Docker", "AWS EC2", "GitHub Actions"],
+      "A collection of interactive web apps showcasing core frontend skills — from fetching live weather data to searching movies and testing knowledge with quizzes.",
+    tags: ["HTML", "CSS", "JavaScript", "API Integration"],
+    highlight: "Built to master fundamentals with real-world functionality",
+    icon: "🌐",
+  },
+  {
+    title: "Event Management Platform",
+    description:
+      "Full-stack event management system with user registration, event creation, and seamless booking — powered by a robust PHP & MySQL backend.",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    highlight: "End-to-end solution handling complex database operations",
+    icon: "📅",
   },
   {
     title: "University Info Desk",
     description:
-      "AI-powered information desk using React frontend with Supabase as RAG backend and Hugging Face API for intelligent query responses.",
+      "AI-powered information assistant that answers university-related queries using RAG architecture and Hugging Face models for intelligent responses.",
     tags: ["React", "Supabase", "Hugging Face API", "RAG", "AI"],
+    highlight: "Combines AI with modern web tech for smart assistance",
+    icon: "🎓",
   },
   {
-    title: "Ride Booking App",
+    title: "Live Chat Room",
     description:
-      "Cross-platform mobile ride booking application built with Expo and Appwrite for real-time booking, authentication, and ride tracking.",
-    tags: ["React Native (Expo)", "Appwrite", "Mobile", "Real-time"],
+      "Real-time messaging app with emoji support, file sharing, and image uploads — a mini WhatsApp clone built with WebSocket technology.",
+    tags: ["Node.js", "Socket.io", "JavaScript", "Real-time"],
+    highlight: "Mastered real-time communication and WebSocket protocols",
+    icon: "💬",
   },
   {
-    title: "Doctor Appointment App",
+    title: "Mobile Applications",
     description:
-      "Cross-platform mobile application built using Expo and Appwrite for booking doctor appointments with authentication and scheduling features.",
-    tags: ["React Native (Expo)", "Appwrite", "Mobile"],
+      "Cross-platform mobile apps for booking doctor appointments and rides — featuring authentication, real-time updates, and smooth UX.",
+    tags: ["React Native", "Expo", "Appwrite", "Mobile"],
+    highlight: "Expanding into mobile development with production-ready apps",
+    icon: "📱",
   },
   {
-    title: "Event Management Website",
+    title: "Cloud & DevOps Projects",
     description:
-      "Full-stack event management platform with user registration, event creation, and booking system using PHP and MySQL backend.",
-    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-  },
-  {
-    title: "Lambda Image Resizing Service",
-    description:
-      "AWS Lambda function integrated with S3 for automatic image resizing. Serverless architecture for scalable image processing.",
-    tags: ["AWS Lambda", "S3", "Node.js", "Serverless"],
-  },
-  {
-    title: "Event & News Apps",
-    description:
-      "Built Event Registration and News Article websites using React & Firebase, with live hosting and real-time data updates.",
-    tags: ["React", "Firebase", "Responsive UI"],
-  },
-  {
-    title: "Portfolio Websites",
-    description:
-      "Movie browser and Weather forecast apps built with HTML, CSS, and JavaScript. Fully responsive and interactive user interfaces.",
-    tags: ["HTML", "CSS", "JavaScript", "Responsive"],
+      "Enterprise-grade deployments with MERN on AWS EC2, CI/CD pipelines, Docker containers, Lambda functions, and Firebase-powered web apps.",
+    tags: ["AWS", "Docker", "CI/CD", "Firebase", "Lambda", "React"],
+    highlight: "Full cloud infrastructure with automated deployments",
+    icon: "☁️",
   },
 ];
 
@@ -108,13 +106,19 @@ const ProjectsSection = () => {
               className="project-card group"
             >
               <div className="p-6 h-full flex flex-col">
-                <h3 className="text-xl font-display font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">{project.icon}</span>
+                  <h3 className="text-xl font-display font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-3 flex-1">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <p className="text-xs text-primary/80 italic mb-4 font-medium">
+                  ✨ {project.highlight}
+                </p>
+                <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
                     <motion.span
                       key={tag}
@@ -127,16 +131,6 @@ const ProjectsSection = () => {
                       {tag}
                     </motion.span>
                   ))}
-                </div>
-                <div className="flex gap-3">
-                  <Button variant="outline" size="sm" className="group/btn">
-                    <Github size={16} className="group-hover/btn:scale-110 transition-transform" />
-                    GitHub
-                  </Button>
-                  <Button variant="ghost" size="sm" className="group/btn">
-                    <ExternalLink size={16} className="group-hover/btn:scale-110 transition-transform" />
-                    Live
-                  </Button>
                 </div>
               </div>
             </motion.div>
