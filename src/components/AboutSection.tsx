@@ -32,68 +32,24 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-12"
+            className="bg-card/50 border border-border/30 rounded-2xl p-6 md:p-8 lg:p-10 mb-12 backdrop-blur-sm"
           >
-            {/* Story intro with decorative elements */}
-            <div className="relative">
-              <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-primary via-primary/50 to-transparent rounded-full hidden lg:block" />
-              
-              <div className="space-y-8 lg:pl-8">
-                {/* Paragraph 1 - The Beginning */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                  className="bg-card/60 border border-border/40 rounded-xl p-6 lg:p-8 backdrop-blur-sm hover:border-primary/30 transition-colors"
-                >
-                  <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4">The Beginning</span>
-                  <p className="text-foreground/80 text-base lg:text-lg leading-[1.8] lg:leading-[2]">
-                    I began my academic journey as a <span className="text-foreground font-medium">medical student</span> during my FSC, but I was always curious about how software is evolving and shaping the world. That curiosity slowly turned into direction, and fate led me to <span className="text-primary font-medium">software engineering at GCUF</span>.
-                  </p>
-                </motion.div>
-
-                {/* Paragraph 2 - The Pivot */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                  className="bg-card/60 border border-border/40 rounded-xl p-6 lg:p-8 backdrop-blur-sm hover:border-primary/30 transition-colors"
-                >
-                  <span className="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full mb-4">The Pivot</span>
-                  <p className="text-foreground/80 text-base lg:text-lg leading-[1.8] lg:leading-[2]">
-                    I started with web development at <span className="text-foreground font-medium">Saylani</span>, but I soon realized I wanted to explore paths that were less familiar. While many around me focused only on standard web projects, I chose to <span className="text-primary font-medium">broaden my toolkit</span> to stand out.
-                  </p>
-                </motion.div>
-
-                {/* Paragraph 3 - The Expansion */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4 }}
-                  className="bg-card/60 border border-border/40 rounded-xl p-6 lg:p-8 backdrop-blur-sm hover:border-primary/30 transition-colors"
-                >
-                  <span className="inline-block px-3 py-1 bg-orange-500/10 text-orange-400 text-xs font-semibold rounded-full mb-4">The Expansion</span>
-                  <p className="text-foreground/80 text-base lg:text-lg leading-[1.8] lg:leading-[2]">
-                    Along with building web applications, I added <span className="text-foreground font-medium">AWS, Docker, CI/CD, and Expo</span>, diving into cloud, automation, and mobile app development. I enjoy exploring new ideas, learning by doing, and understanding systems beyond the surface.
-                  </p>
-                </motion.div>
-
-                {/* Quote */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                  className="relative bg-gradient-to-r from-primary/10 to-emerald-500/10 border border-primary/30 rounded-xl p-6 lg:p-8"
-                >
-                  <div className="absolute -top-3 left-6 text-5xl text-primary/30 font-serif">"</div>
-                  <p className="text-primary text-lg lg:text-xl font-medium italic text-center pt-2">
-                    I&apos;m still learning — but I&apos;m intentional about the direction I&apos;m heading.
-                  </p>
-                </motion.div>
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 text-muted-foreground text-base lg:text-lg leading-relaxed">
+              <div className="space-y-4">
+                <p className="first-letter:text-3xl first-letter:font-bold first-letter:text-primary first-letter:mr-1 first-letter:float-left">
+                  I began my academic journey as a medical student during my FSC, but I was always curious about how software is evolving and shaping the world. That curiosity slowly turned into direction, and fate led me to software engineering at GCUF.
+                </p>
+                <p>
+                  I started with web development at Saylani, but I soon realized I wanted to explore paths that were less familiar. While many around me focused only on standard web projects, I chose to broaden my toolkit to stand out.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <p>
+                  Along with building web applications, I added AWS, Docker, CI/CD, and Expo, diving into cloud, automation, and mobile app development. I enjoy exploring new ideas, learning by doing, and understanding systems beyond the surface.
+                </p>
+                <p className="text-primary font-medium border-l-2 border-primary pl-4 italic">
+                  "I'm still learning — but I'm intentional about the direction I'm heading."
+                </p>
               </div>
             </div>
           </motion.div>
