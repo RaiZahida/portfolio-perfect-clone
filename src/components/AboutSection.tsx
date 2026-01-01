@@ -168,6 +168,16 @@ const AboutSection = () => {
                 <span className="text-primary">•</span>
                 <span>Member of Tech Tribe, university community for technology enthusiasts</span>
               </motion.li>
+              <motion.li 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 }}
+                className="flex items-start gap-2"
+              >
+                <span className="text-primary">•</span>
+                <span>JavaScript Instructor, Online Workshop – "Let's Learn JS Together" by Saylani</span>
+              </motion.li>
             </ul>
           </motion.div>
         </div>

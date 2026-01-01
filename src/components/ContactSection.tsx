@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, Linkedin, Github, MapPin } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -47,20 +47,6 @@ const ContactSection = () => {
               </div>
             </motion.a>
 
-            {/* Phone */}
-            <motion.a
-              href="tel:+923247375453"
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-card border border-border/50 rounded-xl p-6 hover:border-primary/50 transition-all duration-300 flex items-center gap-4 group"
-            >
-              <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                <Phone className="text-primary" size={24} />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Phone</p>
-                <p className="text-foreground font-medium">+92 324 7375453</p>
-              </div>
-            </motion.a>
 
             {/* LinkedIn */}
             <motion.a
@@ -97,24 +83,6 @@ const ContactSection = () => {
             </motion.a>
           </motion.div>
 
-          {/* Location */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-6 bg-card border border-border/50 rounded-xl p-6 flex items-center gap-4"
-          >
-            <div className="p-3 bg-primary/10 rounded-lg">
-              <MapPin className="text-primary" size={24} />
-            </div>
-            <div>
-              <p className="text-sm text-muted-foreground">Location</p>
-              <p className="text-foreground font-medium">
-                Khushal Town, Satyana Road, Faisalabad, Pakistan
-              </p>
-            </div>
-          </motion.div>
 
           {/* Languages */}
           <motion.div 
