@@ -26,26 +26,32 @@ const AboutSection = () => {
           About Me
         </motion.h2>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-muted-foreground text-lg leading-relaxed mb-12 space-y-4"
+            className="bg-card/50 border border-border/30 rounded-2xl p-6 md:p-8 lg:p-10 mb-12 backdrop-blur-sm"
           >
-            <p>
-              I began my academic journey as a medical student during my FSC, but I was always curious about how software is evolving and shaping the world. That curiosity slowly turned into direction, and fate led me to software engineering at GCUF.
-            </p>
-            <p>
-              I started with web development at Saylani, but I soon realized I wanted to explore paths that were less familiar. While many around me focused only on standard web projects, I chose to broaden my toolkit to stand out.
-            </p>
-            <p>
-              Along with building web applications, I added AWS, Docker, CI/CD, and Expo, diving into cloud, automation, and mobile app development. I enjoy exploring new ideas, learning by doing, and understanding systems beyond the surface.
-            </p>
-            <p className="text-primary font-medium">
-              I'm still learning — but I'm intentional about the direction I'm heading.
-            </p>
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 text-muted-foreground text-base lg:text-lg leading-relaxed">
+              <div className="space-y-4">
+                <p className="first-letter:text-3xl first-letter:font-bold first-letter:text-primary first-letter:mr-1 first-letter:float-left">
+                  I began my academic journey as a medical student during my FSC, but I was always curious about how software is evolving and shaping the world. That curiosity slowly turned into direction, and fate led me to software engineering at GCUF.
+                </p>
+                <p>
+                  I started with web development at Saylani, but I soon realized I wanted to explore paths that were less familiar. While many around me focused only on standard web projects, I chose to broaden my toolkit to stand out.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <p>
+                  Along with building web applications, I added AWS, Docker, CI/CD, and Expo, diving into cloud, automation, and mobile app development. I enjoy exploring new ideas, learning by doing, and understanding systems beyond the surface.
+                </p>
+                <p className="text-primary font-medium border-l-2 border-primary pl-4 italic">
+                  "I'm still learning — but I'm intentional about the direction I'm heading."
+                </p>
+              </div>
+            </div>
           </motion.div>
 
           {/* Education & Certifications */}
