@@ -37,15 +37,15 @@ const AboutSection = () => {
             <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 text-muted-foreground text-base lg:text-lg leading-relaxed">
               <div className="space-y-4">
                 <p className="first-letter:text-3xl first-letter:font-bold first-letter:text-primary first-letter:mr-1 first-letter:float-left">
-                  I'm a Software Engineering student currently working as a DevOps Intern at LEAPS Dev, where I've gained hands-on experience building and maintaining CI/CD pipelines, containerizing applications with Docker, and orchestrating infrastructure on AWS.
+                  I'm a Software Engineering student currently working as a DevOps Engineer at LEAPS Dev, where I design, build, and maintain production-grade infrastructure. I specialize in Kubernetes orchestration, AWS cloud services, and CI/CD automation.
                 </p>
                 <p>
-                  My journey started in web development at Saylani, but I discovered my true passion lies in DevOps and infrastructure automation. I've successfully migrated production AI services to Kubernetes, reducing deployment time significantly and architecting scalable cloud solutions.
+                  My journey started in web development at Saylani, but I discovered my true passion lies in DevOps and infrastructure automation. I've successfully migrated production AI services to Kubernetes, reducing pod spin-up time from 5-10 minutes to just 15 seconds using HPA.
                 </p>
               </div>
               <div className="space-y-4">
                 <p>
-                  I'm proficient with Kubernetes (K8s), AWS EKS, GitHub Actions, and have implemented HPA for intelligent auto-scaling. Beyond DevOps, I maintain full-stack development skills with MERN stack, allowing me to understand both development and infrastructure perspectives.
+                  I'm proficient with Kubernetes (K8s), AWS EKS, GitHub Actions, GitLab CI, and have implemented intelligent auto-scaling solutions for production systems. I've also architected infrastructure supporting 2,000+ concurrent users while reducing costs by 80%. Beyond DevOps, I maintain full-stack development skills with MERN stack, allowing me to understand both development and infrastructure perspectives.
                 </p>
                 <p className="text-primary font-medium border-l-2 border-primary pl-4 italic">
                   "Building reliable infrastructure today, so developers can focus on innovation tomorrow."
@@ -70,8 +70,8 @@ const AboutSection = () => {
               <h3 className="text-xl font-display font-semibold text-foreground">Current Role</h3>
             </div>
             <div className="space-y-2">
-              <p className="text-foreground font-medium">DevOps Intern • LEAPS Dev</p>
-              <p className="text-muted-foreground">2026 (3 Months)</p>
+              <p className="text-foreground font-medium">DevOps Engineer • LEAPS Dev</p>
+              <p className="text-muted-foreground">2026 (Full-time)</p>
               <ul className="text-muted-foreground text-sm space-y-2 mt-3">
                 <li>• Building and maintaining CI/CD pipelines using GitHub Actions and GitLab CI</li>
                 <li>• Containerizing applications with Docker for environment consistency</li>
