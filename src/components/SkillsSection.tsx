@@ -24,6 +24,31 @@ import {
 } from "lucide-react";
 
 const skills = [
+  // DevOps & Cloud FIRST
+  { name: "Docker", icon: Container, color: "#2496ED" },
+  { name: "Kubernetes (K8s)", icon: Cpu, color: "#326CE5" },
+  { name: "AWS EKS", icon: Cloud, color: "#FF9900" },
+  { name: "AWS EC2", icon: Server, color: "#FF9900" },
+  { name: "AWS S3", icon: Database, color: "#FF9900" },
+  { name: "AWS Lambda", icon: Flame, color: "#FF9900" },
+  { name: "AWS ECR", icon: Container, color: "#FF9900" },
+  { name: "AWS VPC", icon: Lock, color: "#FF9900" },
+  { name: "AWS IAM", icon: Lock, color: "#FF9900" },
+  { name: "AWS CodeBuild", icon: Ship, color: "#FF9900" },
+  { name: "HPA", icon: Gauge, color: "#326CE5" },
+  { name: "Metrics Server", icon: Gauge, color: "#326CE5" },
+  { name: "GitHub Actions", icon: Github, color: "#ffffff" },
+  { name: "GitLab CI", icon: GitBranch, color: "#FC6D26" },
+  { name: "Nginx", icon: Gauge, color: "#009639" },
+  { name: "PM2", icon: Terminal, color: "#2B037A" },
+  { name: "Linux", icon: Terminal, color: "#FCC624" },
+  { name: "Bash", icon: Terminal, color: "#4EAA25" },
+  { name: "Systemd", icon: Terminal, color: "#FCC624" },
+  { name: "Security Groups", icon: Lock, color: "#FF9900" },
+  { name: "Linux Firewall", icon: Lock, color: "#FCC624" },
+  { name: "Auto Scaling", icon: Gauge, color: "#FF9900" },
+  { name: "AWS LoadBalancer", icon: Cloud, color: "#FF9900" },
+  
   // Frontend & Web
   { name: "HTML", icon: Globe, color: "#E34F26" },
   { name: "CSS", icon: Palette, color: "#1572B6" },
@@ -37,45 +62,10 @@ const skills = [
   { name: "MongoDB", icon: Leaf, color: "#47A248" },
   { name: "MySQL", icon: Database, color: "#4479A1" },
   { name: "Firebase", icon: Flame, color: "#FFCA28" },
-  
-  // DevOps & Cloud - CONTAINER & ORCHESTRATION
-  { name: "Docker", icon: Container, color: "#2496ED" },
-  { name: "Kubernetes (K8s)", icon: Cpu, color: "#326CE5" },
-  { name: "AWS EKS", icon: Cloud, color: "#FF9900" },
-  { name: "HPA", icon: Gauge, color: "#326CE5" },
-  { name: "Metrics Server", icon: Gauge, color: "#326CE5" },
-  
-  // Cloud Services - AWS
-  { name: "AWS EC2", icon: Server, color: "#FF9900" },
-  { name: "AWS S3", icon: Database, color: "#FF9900" },
-  { name: "AWS Lambda", icon: Flame, color: "#FF9900" },
-  { name: "AWS ECR", icon: Container, color: "#FF9900" },
-  { name: "AWS VPC", icon: Lock, color: "#FF9900" },
-  { name: "AWS IAM", icon: Lock, color: "#FF9900" },
-  { name: "AWS CodeBuild", icon: Ship, color: "#FF9900" },
-  
-  // CI/CD & Deployment
-  { name: "GitHub Actions", icon: Github, color: "#ffffff" },
-  { name: "GitLab CI", icon: GitBranch, color: "#FC6D26" },
-  { name: "AWS LoadBalancer", icon: Cloud, color: "#FF9900" },
-  
-  // Infrastructure & Linux
-  { name: "Nginx", icon: Gauge, color: "#009639" },
-  { name: "PM2", icon: Terminal, color: "#2B037A" },
-  { name: "Linux", icon: Terminal, color: "#FCC624" },
-  { name: "Bash", icon: Terminal, color: "#4EAA25" },
-  { name: "Systemd", icon: Terminal, color: "#FCC624" },
-  
-  // Cloud Backends
   { name: "Supabase", icon: Layers, color: "#3ECF8E" },
   { name: "Appwrite", icon: FileCode, color: "#FD366E" },
   { name: "GitHub", icon: Github, color: "#ffffff" },
   { name: "GitLab", icon: GitBranch, color: "#FC6D26" },
-  
-  // Security & Networking
-  { name: "Security Groups", icon: Lock, color: "#FF9900" },
-  { name: "Linux Firewall", icon: Lock, color: "#FCC624" },
-  { name: "Auto Scaling", icon: Gauge, color: "#FF9900" },
 ];
 
 const containerVariants = {
@@ -131,12 +121,12 @@ const SkillsSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="max-w-4xl mx-auto mb-12 bg-gradient-to-r from-primary/10 to-emerald-500/10 border border-primary/30 rounded-xl p-6 text-center"
         >
-          <h3 className="text-lg font-semibold text-foreground mb-3">DevOps Core Expertise</h3>
-          <p className="text-muted-foreground text-sm">
-            <span className="font-semibold">Container & Orchestration:</span> Docker, Kubernetes (K8s), AWS EKS, HPA, Metrics Server, ECR | 
-            <span className="font-semibold ml-2">CI/CD:</span> GitHub Actions, GitLab CI, AWS CodeBuild | 
-            <span className="font-semibold ml-2">Cloud:</span> EC2, S3, Lambda, VPC, IAM, Auto Scaling, LoadBalancer | 
-            <span className="font-semibold ml-2">Infrastructure:</span> Nginx, PM2, Systemd, Linux, Bash, Security Groups
+          <h3 className="text-lg font-semibold text-foreground mb-3">🚀 DevOps Core Expertise</h3>
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            <span className="font-semibold text-primary">Container & Orchestration:</span> Docker, Kubernetes (K8s), AWS EKS, HPA, Metrics Server, ECR | 
+            <span className="font-semibold text-primary ml-2">CI/CD:</span> GitHub Actions, GitLab CI, AWS CodeBuild | 
+            <span className="font-semibold text-primary ml-2">AWS Cloud:</span> EC2, S3, Lambda, VPC, IAM, Auto Scaling, LoadBalancer | 
+            <span className="font-semibold text-primary ml-2">Infrastructure:</span> Nginx, PM2, Systemd, Linux, Bash, Security Groups
           </p>
         </motion.div>
 
