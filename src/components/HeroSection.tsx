@@ -11,7 +11,7 @@ const HeroSection = () => {
           <div className="order-1 lg:order-1 text-center lg:text-left">
             <div className="inline-block px-4 py-2 rounded-full border border-primary/50 bg-primary/10 mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <span className="text-primary text-sm font-medium">
-                Junior DevOps Engineer • AWS | Kubernetes | CI/CD
+                DevOps Engineer • AWS | Kubernetes | CI/CD
               </span>
             </div>
             
