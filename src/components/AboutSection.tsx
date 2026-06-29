@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Award, Heart } from "lucide-react";
+import { GraduationCap, Award, Heart, Briefcase } from "lucide-react";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -37,20 +37,47 @@ const AboutSection = () => {
             <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 text-muted-foreground text-base lg:text-lg leading-relaxed">
               <div className="space-y-4">
                 <p className="first-letter:text-3xl first-letter:font-bold first-letter:text-primary first-letter:mr-1 first-letter:float-left">
-                  I began my academic journey as a medical student during my FSC, but I was always curious about how software is evolving and shaping the world. That curiosity slowly turned into direction, and fate led me to software engineering at GCUF.
+                  I'm a Software Engineering student currently working as a DevOps Intern at LEAPS Dev, where I've gained hands-on experience building and maintaining CI/CD pipelines, containerizing applications with Docker, and orchestrating infrastructure on AWS.
                 </p>
                 <p>
-                  I started with web development at Saylani, but I soon realized I wanted to explore paths that were less familiar. While many around me focused only on standard web projects, I chose to broaden my toolkit to stand out.
+                  My journey started in web development at Saylani, but I discovered my true passion lies in DevOps and infrastructure automation. I've successfully migrated production AI services to Kubernetes, reducing deployment time significantly and architecting scalable cloud solutions.
                 </p>
               </div>
               <div className="space-y-4">
                 <p>
-                  Along with building web applications, I added AWS, Docker, CI/CD, and Expo, diving into cloud, automation, and mobile app development. I enjoy exploring new ideas, learning by doing, and understanding systems beyond the surface.
+                  I'm proficient with Kubernetes (K8s), AWS EKS, GitHub Actions, and have implemented HPA for intelligent auto-scaling. Beyond DevOps, I maintain full-stack development skills with MERN stack, allowing me to understand both development and infrastructure perspectives.
                 </p>
                 <p className="text-primary font-medium border-l-2 border-primary pl-4 italic">
-                  "I'm still learning — but I'm intentional about the direction I'm heading."
+                  "Building reliable infrastructure today, so developers can focus on innovation tomorrow."
                 </p>
               </div>
+            </div>
+          </motion.div>
+
+          {/* Current Role */}
+          <motion.div 
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{ y: -5, scale: 1.02 }}
+            className="bg-gradient-to-br from-primary/10 to-emerald-500/10 border border-primary/30 rounded-xl p-6 hover:border-primary/50 transition-all duration-300 mb-12"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-3 bg-gradient-to-br from-primary to-emerald-600 rounded-lg">
+                <Briefcase className="text-primary-foreground" size={24} />
+              </div>
+              <h3 className="text-xl font-display font-semibold text-foreground">Current Role</h3>
+            </div>
+            <div className="space-y-2">
+              <p className="text-foreground font-medium">DevOps Intern • LEAPS Dev</p>
+              <p className="text-muted-foreground">2026 (3 Months)</p>
+              <ul className="text-muted-foreground text-sm space-y-2 mt-3">
+                <li>• Building and maintaining CI/CD pipelines using GitHub Actions and GitLab CI</li>
+                <li>• Containerizing applications with Docker for environment consistency</li>
+                <li>• Managing AWS infrastructure (EC2, S3, IAM) and VPC networking</li>
+                <li>• Troubleshooting pipeline failures and improving deployment velocity</li>
+              </ul>
             </div>
           </motion.div>
 
@@ -75,11 +102,11 @@ const AboutSection = () => {
                 <p className="text-foreground font-medium">BS Software Engineering</p>
                 <p className="text-muted-foreground">Government College University, Faisalabad</p>
                 <p className="text-primary font-semibold">CGPA: 3.86 / 4.00</p>
-                <p className="text-muted-foreground text-sm">5th Semester • 2023-2027</p>
+                <p className="text-muted-foreground text-sm">2023 - 2027 (Expected)</p>
               </div>
             </motion.div>
 
-            {/* Training Card */}
+            {/* AWS Certification Card */}
             <motion.div 
               variants={cardVariants}
               initial="hidden"
@@ -90,21 +117,22 @@ const AboutSection = () => {
               className="bg-card border border-border/50 rounded-xl p-6 hover:border-primary/50 transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
+                <div className="p-3 bg-gradient-to-br from-orange-500 to-amber-500 rounded-lg">
                   <Award className="text-white" size={24} />
                 </div>
-                <h3 className="text-xl font-display font-semibold text-foreground">Training</h3>
+                <h3 className="text-xl font-display font-semibold text-foreground">AWS Certification</h3>
               </div>
               <div className="space-y-2">
-                <p className="text-foreground font-medium">Web and Mobile Development</p>
-                <p className="text-muted-foreground">Saylani Mass IT Training (S.M.I.T)</p>
-                <p className="text-muted-foreground text-sm">MERN Stack & React Native with Expo</p>
-                <p className="text-muted-foreground text-sm">Jan 2024 - Dec 2025</p>
+                <p className="text-foreground font-medium">AWS Cloud Practitioner</p>
+                <p className="text-muted-foreground">AWS Skill Builder • 2026</p>
+                <p className="text-muted-foreground text-sm">
+                  Certified in EC2, Lambda, S3, VPC, and IAM - deploying and managing cloud applications securely
+                </p>
               </div>
             </motion.div>
           </div>
 
-          {/* AWS Certification */}
+          {/* Training & Experience */}
           <motion.div 
             variants={cardVariants}
             initial="hidden"
@@ -114,17 +142,30 @@ const AboutSection = () => {
             className="bg-card border border-border/50 rounded-xl p-6 hover:border-primary/50 transition-all duration-300 mb-12"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-gradient-to-br from-orange-500 to-amber-500 rounded-lg">
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
                 <Award className="text-white" size={24} />
               </div>
-              <h3 className="text-xl font-display font-semibold text-foreground">AWS Certification</h3>
+              <h3 className="text-xl font-display font-semibold text-foreground">Training & Experience</h3>
             </div>
-            <div className="space-y-2">
-              <p className="text-foreground font-medium">AWS Cloud Practitioner</p>
-              <p className="text-muted-foreground">AWS Skill Builder</p>
-              <p className="text-muted-foreground text-sm">
-                EC2, Lambda, S3, VPC, IAM – deploying and managing web and serverless applications securely
-              </p>
+            <div className="grid md:grid-cols-2 gap-6 text-muted-foreground text-sm">
+              <div className="space-y-3">
+                <div>
+                  <p className="font-semibold text-foreground">Web & Mobile App Developer</p>
+                  <p className="text-xs">Saylani Mass IT Training • 2025-2026</p>
+                  <p className="text-xs mt-1">MERN Stack & React Native with Expo</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">JavaScript Mentor</p>
+                  <p className="text-xs">"Let's Learn JavaScript Together" Workshop</p>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-semibold text-foreground">Freelance Developer & Infrastructure Engineer</p>
+                  <p className="text-xs">Upwork • 2026 - Present</p>
+                  <p className="text-xs mt-1">End-to-end deployment on AWS EC2 & DigitalOcean</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -141,9 +182,19 @@ const AboutSection = () => {
               <div className="p-3 bg-gradient-to-br from-pink-500 to-rose-500 rounded-lg">
                 <Heart className="text-white" size={24} />
               </div>
-              <h3 className="text-xl font-display font-semibold text-foreground">Activities & Volunteer Work</h3>
+              <h3 className="text-xl font-display font-semibold text-foreground">Activities & Involvement</h3>
             </div>
             <ul className="space-y-3 text-muted-foreground">
+              <motion.li 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="flex items-start gap-2"
+              >
+                <span className="text-primary">•</span>
+                <span>Member, Tech Tribe — University technology community, GCUF (2023 - Present)</span>
+              </motion.li>
               <motion.li 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -152,37 +203,7 @@ const AboutSection = () => {
                 className="flex items-start gap-2"
               >
                 <span className="text-primary">•</span>
-                <span>Volunteer at SMIT during entry test</span>
-              </motion.li>
-              <motion.li 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-                className="flex items-start gap-2"
-              >
-                <span className="text-primary">•</span>
-                <span>Volunteer at Alkhidmat Foundation for child welfare programs</span>
-              </motion.li>
-              <motion.li 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-                className="flex items-start gap-2"
-              >
-                <span className="text-primary">•</span>
-                <span>Member of Tech Tribe, university community for technology enthusiasts</span>
-              </motion.li>
-              <motion.li 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6 }}
-                className="flex items-start gap-2"
-              >
-                <span className="text-primary">•</span>
-                <span>JavaScript Instructor, Online Workshop – "Let's Learn JS Together" by Saylani</span>
+                <span>Volunteer, Alkhidmat Foundation — Child welfare programs (2024)</span>
               </motion.li>
             </ul>
           </motion.div>
