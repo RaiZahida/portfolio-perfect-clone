@@ -4,64 +4,64 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "Mini Web Projects",
-    subtitle: "Weather App • Movie Search • Quiz Website",
+    title: "AI Voice Agent — EKS Migration & Auto-Scaling",
+    subtitle: "Production Kubernetes Deployment",
     description:
-      "Interactive web apps showcasing core frontend skills — fetching live weather data, searching movies via API, and testing knowledge with quizzes.",
-    tags: ["HTML", "CSS", "JavaScript", "API Integration"],
-    highlight: "Built to master fundamentals with real-world functionality",
-    icon: "🌐",
-    github: "https://github.com/zahidaparveen",
-  },
-  {
-    title: "Event Management Platform",
-    subtitle: "Full-Stack Web Application",
-    description:
-      "Complete event management system with user registration, event creation, and seamless booking — powered by a robust PHP & MySQL backend.",
-    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    highlight: "End-to-end solution handling complex database operations",
-    icon: "📅",
-    github: "https://github.com/zahidaparveen",
-  },
-  {
-    title: "University Info Desk",
-    subtitle: "AI-Powered Assistant",
-    description:
-      "Intelligent information assistant that answers university-related queries using RAG architecture and Hugging Face models for smart responses.",
-    tags: ["React", "Supabase", "Hugging Face API", "RAG", "AI"],
-    highlight: "Combines AI with modern web tech for smart assistance",
-    icon: "🎓",
-    github: "https://github.com/zahidaparveen",
-  },
-  {
-    title: "Live Chat Room",
-    subtitle: "Mini WhatsApp Clone",
-    description:
-      "Real-time messaging app with emoji support, file sharing, and image uploads — built with WebSocket technology for instant communication.",
-    tags: ["Node.js", "Socket.io", "JavaScript", "Real-time"],
-    highlight: "Mastered real-time communication and WebSocket protocols",
-    icon: "💬",
-    github: "https://github.com/zahidaparveen",
-  },
-  {
-    title: "Mobile Applications",
-    subtitle: "Doctor Appointment App • Ride Booking App",
-    description:
-      "Cross-platform mobile apps featuring authentication, real-time updates, booking systems, and smooth user experience.",
-    tags: ["React Native", "Expo", "Appwrite", "Mobile"],
-    highlight: "Expanding into mobile development with production-ready apps",
-    icon: "📱",
-    github: "https://github.com/zahidaparveen",
-  },
-  {
-    title: "Cloud & DevOps Projects",
-    subtitle: "AWS EC2 • Lambda • Firebase Apps",
-    description:
-      "Enterprise-grade deployments: MERN stack on AWS EC2 with CI/CD pipelines, Docker containers, Lambda image resizing, and Firebase-powered Event & News websites.",
-    tags: ["AWS", "Docker", "CI/CD", "Firebase", "Lambda", "React"],
-    highlight: "Full cloud infrastructure with automated deployments",
+      "Migrated production AI voice agent from EC2 Auto Scaling to AWS EKS, reducing pod spin-up time from 5–10 minutes to 15 seconds using Horizontal Pod Autoscaler (HPA). Dockerized the voice agent and built images via AWS CodeBuild, pushed to ECR. Installed Metrics Server for real-time CPU/memory data. Configured HPA with 15-second scale-up and 5-minute scale-down delay. Exposed service via AWS LoadBalancer for external traffic routing.",
+    tags: ["AWS EKS", "Kubernetes", "HPA", "Docker", "ECR", "CodeBuild", "Metrics Server"],
+    highlight: "95% reduction in pod spin-up time for incoming calls",
     icon: "☁️",
-    github: "https://github.com/zahidaparveen",
+    github: "https://github.com/RaiZahida",
+  },
+  {
+    title: "AWS Cost Optimization & LiveKit OSS Infrastructure",
+    subtitle: "Real-time Communication Scaling",
+    description:
+      "Architected real-time communication infrastructure using LiveKit OSS supporting 2,000+ concurrent users via AWS auto-scaling and containerized services. Restructured cloud resource allocation and service architecture, reducing AWS infrastructure costs by ~80% while maintaining performance under peak load. Managed Redis, egress services, and Docker images with systemd for persistent service management.",
+    tags: ["AWS", "Auto Scaling", "Docker", "Redis", "Systemd", "LiveKit", "Cost Optimization"],
+    highlight: "80% reduction in AWS infrastructure costs",
+    icon: "💰",
+    github: "https://github.com/RaiZahida",
+  },
+  {
+    title: "MERN App — Full Production Deployment Pipeline",
+    subtitle: "Doctor Appointment System",
+    description:
+      "Deployed full-stack MERN doctor appointment system on AWS EC2 with Nginx reverse proxy, PM2 process management, and Linux firewall hardening. Implemented end-to-end GitHub Actions CI/CD pipeline automating build, test, and deployment stages with zero-downtime deployments.",
+    tags: ["AWS EC2", "Docker", "Nginx", "PM2", "GitHub Actions", "CI/CD"],
+    highlight: "Zero-downtime deployments with automated CI/CD",
+    icon: "🚀",
+    github: "https://github.com/RaiZahida",
+  },
+  {
+    title: "AI Agent & Multi-Project CI/CD Pipelines",
+    subtitle: "Next.js & Python Services Automation",
+    description:
+      "Deployed AI-based services on AWS using systemd for process orchestration, ensuring persistent uptime and automated recovery across server restarts. Designed and implemented separate CI/CD pipelines for Next.js and Python applications, enabling automated testing and deployment workflows across multiple services.",
+    tags: ["GitHub Actions", "AWS", "Next.js", "Python", "Systemd", "CI/CD"],
+    highlight: "Automated testing and deployment workflows across multiple services",
+    icon: "⚙️",
+    github: "https://github.com/RaiZahida",
+  },
+  {
+    title: "Full-Stack MERN Applications",
+    subtitle: "Doctor Appointment & Real-time Features",
+    description:
+      "Developed production-grade MERN applications including doctor appointment booking system with real-time updates. Integrated cloud backends with Firebase, Supabase, and Appwrite for scalable cloud solutions.",
+    tags: ["React", "Node.js", "MongoDB", "Express", "Firebase", "Supabase"],
+    highlight: "Production-ready apps with real-time booking features",
+    icon: "📱",
+    github: "https://github.com/RaiZahida",
+  },
+  {
+    title: "Cloud & DevOps Infrastructure",
+    subtitle: "AWS Multi-Service Deployment",
+    description:
+      "Comprehensive AWS infrastructure management including EC2 provisioning, security hardening with VPC and Security Groups, IAM policy configuration, S3 bucket management, and Lambda serverless functions. Containerized applications using Docker with secure registry management via ECR.",
+    tags: ["AWS", "Docker", "Lambda", "S3", "VPC", "IAM", "ECR"],
+    highlight: "Enterprise-grade cloud infrastructure with security hardening",
+    icon: "🏗️",
+    github: "https://github.com/RaiZahida",
   },
 ];
 
@@ -101,7 +101,8 @@ const ProjectsSection = () => {
             My Projects
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A collection of my work, from full-stack applications to cloud-native solutions.
+            DevOps infrastructure projects, cloud migrations, and full-stack applications showcasing 
+            expertise in containerization, Kubernetes orchestration, CI/CD automation, and AWS cloud engineering.
           </p>
         </motion.div>
 
