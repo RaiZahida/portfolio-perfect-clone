@@ -11,7 +11,7 @@ const HeroSection = () => {
           <div className="order-1 lg:order-1 text-center lg:text-left">
             <div className="inline-block px-4 py-2 rounded-full border border-primary/50 bg-primary/10 mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <span className="text-primary text-sm font-medium">
-                Full-Stack Developer & DevOps Enthusiast
+                Junior DevOps Engineer • AWS | Kubernetes | CI/CD
               </span>
             </div>
             
@@ -20,9 +20,9 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              I am a Software Engineering student with hands-on experience in MERN stack development, 
-              cloud computing with AWS, and DevOps practices. Passionate about building scalable 
-              web applications and continuous learning.
+              Software Engineering student with hands-on DevOps experience across containerization, 
+              Kubernetes orchestration, AWS cloud infrastructure, and CI/CD automation. Passionate about 
+              building reliable, scalable systems and automating deployment workflows.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: '0.5s' }}>
